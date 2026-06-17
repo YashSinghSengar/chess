@@ -306,10 +306,6 @@ h1.title {
 }
 
 .history-panel {
-<<<<<<< HEAD
-=======
-...
->>>>>>> 58ae2d66e6140b224578a2d3f1955de90803f31d
   flex-grow: 1;
   max-height: 400px;
 }
