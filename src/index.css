@@ -1,0 +1,57 @@
+:root {
+  --bg-color: #050505;
+  --panel-bg: rgba(20, 20, 30, 0.8);
+  --neon-purple: #bc13fe;
+  --neon-cyan: #00f3ff;
+  --neon-pink: #ff00ff;
+  --text-main: #e0e0e0;
+  --board-dark: #1a1b2e;
+  --board-light: #2a2d4a;
+  --shadow-purple: 0 0 10px var(--neon-purple), 0 0 20px var(--neon-purple);
+  --shadow-cyan: 0 0 10px var(--neon-cyan), 0 0 20px var(--neon-cyan);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.cyber-grid {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(188, 19, 254, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(188, 19, 254, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.cyber-grid::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, transparent 0%, var(--bg-color) 80%);
+}
